@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- RecyclerView bileşeni -->
+    <TextView
+        android:id="@+id/editKatagoriText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Katagoriler"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textSize="34sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewKatagoriler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:padding="8dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

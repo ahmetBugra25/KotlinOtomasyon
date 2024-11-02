@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/anaMenuFragment">
+
+    <fragment
+        android:id="@+id/anaMenuFragment"
+        android:name="com.example.otomasyon.view.AnaMenuFragment"
+        android:label="fragment_ana_menu"
+        tools:layout="@layout/fragment_ana_menu" >
+        <action
+            android:id="@+id/action_anaMenuFragment_to_urunEkleFragment"
+            app:destination="@id/urunEkleFragment" />
+        <action
+            android:id="@+id/action_anaMenuFragment_to_katogoriEkleFragment"
+            app:destination="@id/katogoriEkleFragment" />
+        <action
+            android:id="@+id/action_anaMenuFragment_to_katagorilerFragment"
+            app:destination="@id/katagorilerFragment" />
+        <action
+            android:id="@+id/action_anaMenuFragment_to_editKatagoriFragment"
+            app:destination="@id/editKatagoriFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/urunlerFragment"
+        android:name="com.example.otomasyon.view.UrunlerFragment"
+        android:label="fragment_urunler"
+        tools:layout="@layout/fragment_urunler" >
+        <argument
+            android:name="katagoriName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_urunlerFragment_to_editUrun"
+            app:destination="@id/editUrun" />
+    </fragment>
+    <fragment
+        android:id="@+id/urunEkleFragment"
+        android:name="com.example.otomasyon.view.UrunEkleFragment"
+        android:label="fragment_urun_ekle"
+        tools:layout="@layout/fragment_urun_ekle" />
+    <fragment
+        android:id="@+id/katogoriEkleFragment"
+        android:name="com.example.otomasyon.view.KatogoriEkleFragment"
+        android:label="fragment_katogori_ekle"
+        tools:layout="@layout/fragment_katogori_ekle" />
+    <fragment
+        android:id="@+id/katagorilerFragment"
+        android:name="com.example.otomasyon.view.KatagorilerFragment"
+        android:label="KatagorilerFragment" >
+        <action
+            android:id="@+id/action_katagorilerFragment_to_urunlerFragment"
+            app:destination="@id/urunlerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editKatagoriFragment"
+        android:name="com.example.otomasyon.view.EditKatagoriFragment"
+        android:label="EditKatagoriFragment" >
+        <action
+            android:id="@+id/action_editKatagoriFragment_to_lastEditKatagori"
+            app:destination="@id/lastEditKatagori" />
+    </fragment>
+    <fragment
+        android:id="@+id/lastEditKatagori"
+        android:name="com.example.otomasyon.view.LastEditKatagori"
+        android:label="fragment_last_edit_katagori"
+        tools:layout="@layout/fragment_last_edit_katagori" >
+        <argument
+            android:name="katagoriID"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/editUrun"
+        android:name="com.example.otomasyon.view.EditUrun"
+        android:label="fragment_edit_urun"
+        tools:layout="@layout/fragment_edit_urun" >
+        <argument
+            android:name="UrunID"
+            app:argType="integer" />
+    </fragment>
+</navigation>
