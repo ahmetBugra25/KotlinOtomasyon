@@ -1,0 +1,6 @@
+- Kotlin Programlama dili ile yazılmıştır.
+- SqLite ve Room Database Kullanılmıştır.
+- Image Permission ve Storage Permission kullanılmıştır.
+- Bir işletmeye ait urun bilgilerini tutabileceği ve kontrol edebileceği otomasyon örneği olarak yapılmıştır.
+- Uygulamada işletme sahibi katagoriler belirleyebilir ve o katagorilere urunler ekleyebilir.
+- Katagori ve Urun bilgilerini silebilir ve güncelleyebilir.
